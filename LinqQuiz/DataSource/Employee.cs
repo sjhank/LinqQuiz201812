@@ -14,6 +14,6 @@ namespace LinqQuiz
         public TitleType Title { get; set; }
         public DateTime HireDate { get; set; }
         public GenderType Gender { get; set; }
-        public DepartmentType Department { get; set; }
+        public DepartmentID Department { get; set; }
     }
 }

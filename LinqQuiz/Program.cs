@@ -10,8 +10,9 @@ namespace LinqQuiz
     {
         static void Main(string[] args)
         {
-            // Quiz1
-            Quiz1.Run();
+            // 執行
+            QuizTemplate.Run();
+
 
         }
     }

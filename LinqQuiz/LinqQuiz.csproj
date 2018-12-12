@@ -44,13 +44,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSource\Department.cs" />
+    <Compile Include="DataSource\Departments.cs" />
     <Compile Include="DataSource\Employee.cs" />
     <Compile Include="DataSource\Employees.cs" />
     <Compile Include="DataSource\Gender.cs" />
     <Compile Include="DataSource\Title.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quiz1.cs" />
+    <Compile Include="Quiz01.cs" />
+    <Compile Include="Quiz10.cs" />
+    <Compile Include="Quiz02.cs" />
+    <Compile Include="Quiz03.cs" />
+    <Compile Include="Quiz04.cs" />
+    <Compile Include="Quiz05.cs" />
+    <Compile Include="Quiz06.cs" />
+    <Compile Include="Quiz07.cs" />
+    <Compile Include="Quiz08.cs" />
+    <Compile Include="Quiz09.cs" />
+    <Compile Include="Quiz11.cs" />
+    <Compile Include="Quiz12.cs" />
+    <Compile Include="Quiz13.cs" />
+    <Compile Include="Quiz14.cs" />
+    <Compile Include="Quiz15.cs" />
+    <Compile Include="QuizTemplate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
