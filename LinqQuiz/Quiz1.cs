@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace LinqQuiz
 {
-    class Program
+    public static class Quiz1
     {
-        static void Main(string[] args)
+        public static void Run()
         {
-            // Quiz1
-            Quiz1.Run();
 
         }
     }

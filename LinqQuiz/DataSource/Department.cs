@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace LinqQuiz
 {
-    class Program
+    public enum DepartmentType
     {
-        static void Main(string[] args)
-        {
-            // Quiz1
-            Quiz1.Run();
-
-        }
+        A1, A2, B1, B2, B3, C1
     }
 }

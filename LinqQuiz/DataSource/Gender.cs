@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace LinqQuiz
 {
-    class Program
+    public enum GenderType
     {
-        static void Main(string[] args)
-        {
-            // Quiz1
-            Quiz1.Run();
-
-        }
+        Male, Female, Third
     }
 }
