@@ -39,3 +39,4 @@ namespace LinqQuiz
         }
     }
 }
+// 本資料純屬虛構，如有雷同，純屬巧合

@@ -27,8 +27,7 @@ namespace LinqQuiz
             //// tip. 使用下方程式碼顯示資料
             //foreach (var q in query)
             //{
-            //    Console.WriteLine($"Department = {q.Department["ID"]}");
-            //    Console.WriteLine($"Employee = {q.Employee["ID"]}");
+            //    Console.WriteLine($"Department = {q.Department["ID"]}, Employee = {q.Employee["ID"]}");
             //}
 
             // 作答區

@@ -28,8 +28,7 @@ namespace LinqQuiz
             //// tip. 使用下方程式碼顯示資料
             //foreach (var q in query)
             //{
-            //    Console.WriteLine($"Department = {q.Department["ID"]}");
-            //    Console.WriteLine($"Employee = {q.Employee?["ID"]}");
+            //    Console.WriteLine($"Department = {q.Department["ID"]}, Employee = {q.Employee?["ID"] ?? "No Body"}");
             //}
 
             // 作答區
@@ -42,4 +41,5 @@ namespace LinqQuiz
 #region 提示
 // 1. 使用 AsEnumerable() 將 DataTable 轉成 IEnumerable<DataRow>
 // 2. 使用 GroupJoin & SelectMany 進行外連結(Left Outer Join)，並取得部門及員工資料
+//    或是使用 宣告式 的 join 寫法
 #endregion

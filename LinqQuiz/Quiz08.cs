@@ -11,11 +11,11 @@ namespace LinqQuiz
     {
         public static void Run()
         {
-            // 請取出 Data 員工清單中，
+            // 請取出 employeeData 員工清單中，
             // 進階題: 如果有一本員工名冊(依照 ID 排序)，一頁有五個員工，如何取出某一頁的員工資料
-            // Data 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
+            // employeeData 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
 
-            DataTable data = Employees.GetEmployeesDataTable();
+            DataTable employeeData = Employees.GetEmployeesDataTable();
 
             // 作答區
 

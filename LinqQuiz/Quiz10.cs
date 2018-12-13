@@ -11,10 +11,10 @@ namespace LinqQuiz
     {
         public static void Run()
         {
-            // 請取出 Data 員工清單的 LastName 字串，而且不重複，得到集合物件 query
-            // Data 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
+            // 請取出 employeeData 員工清單的 LastName 字串，而且不重複，得到集合物件 query
+            // employeeData 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
 
-            DataTable data = Employees.GetEmployeesDataTable();
+            DataTable employeeData = Employees.GetEmployeesDataTable();
 
             // 作答區
 

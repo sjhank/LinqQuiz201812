@@ -11,12 +11,12 @@ namespace LinqQuiz
     {
         public static void Run()
         {
-            // 請將 Data 員工清單，依照 Department 進行分組，得到集合物件 query，其中包含以下資料
+            // 請將 employeeData 員工清單，依照 Department 進行分組，得到集合物件 query，其中包含以下資料
             // 1. Key = 鍵值
             // 2. Data = 屬於此鍵值的員工資料
-            // Data 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
+            // employeeData 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
 
-            DataTable data = Employees.GetEmployeesDataTable();
+            DataTable employeeData = Employees.GetEmployeesDataTable();
 
             // 作答區
 

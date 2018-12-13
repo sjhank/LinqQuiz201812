@@ -69,7 +69,15 @@
     <Compile Include="QuizTemplate.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Answer\Answer.md" />
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Answer\Answer.html">
+      <DependentUpon>Answer.md</DependentUpon>
+    </Content>
+    <Content Include="Answer\md-styles.js" />
+    <None Include="Answer\md-styles.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

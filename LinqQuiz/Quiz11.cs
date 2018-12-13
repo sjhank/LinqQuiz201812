@@ -11,10 +11,10 @@ namespace LinqQuiz
     {
         public static void Run()
         {
-            // 請將 Data 員工清單轉成字典 Dictionary<int, string>，key 為 ID，Value 為 FirstName
-            // Data 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
+            // 請將 employeeData 員工清單轉成字典 Dictionary<int, string>，key 為 ID，Value 為 FirstName
+            // employeeData 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
 
-            DataTable data = Employees.GetEmployeesDataTable();
+            DataTable employeeData = Employees.GetEmployeesDataTable();
 
             // 作答區
 

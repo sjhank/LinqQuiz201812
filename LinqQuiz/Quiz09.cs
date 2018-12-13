@@ -11,10 +11,10 @@ namespace LinqQuiz
     {
         public static void Run()
         {
-            // 請查詢 Data 員工清單中，是否存在 HireDate 為 2016 年 6 月的員工
-            // Data 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
+            // 請查詢 employeeData 員工清單中，是否存在 HireDate 為 2016 年 6 月的員工
+            // employeeData 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
 
-            DataTable data = Employees.GetEmployeesDataTable();
+            DataTable employeeData = Employees.GetEmployeesDataTable();
 
             // 作答區
 

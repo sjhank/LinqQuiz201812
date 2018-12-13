@@ -12,8 +12,6 @@ namespace LinqQuiz
         {
             // 執行
             QuizTemplate.Run();
-
-
         }
     }
 }

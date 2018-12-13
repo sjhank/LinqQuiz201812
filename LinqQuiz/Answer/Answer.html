@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>答案</title>
+</head>
+<body>
+
+    <link rel="stylesheet" href="md-styles.css">
+<h3 id="section">答案</h3>
+<h4 id="quiz01">Quiz01</h4>
+<pre><code class="language-Csharp">var query = data
+    .Select(p =&gt; p * 2);
+
+foreach (var item in query)
+{
+    Console.WriteLine(item);
+}
+</code></pre>
+<pre><code class="language-Csharp">var query = from p in data
+            select p * 2;
+
+foreach (var item in query)
+{
+    Console.WriteLine(item);
+}
+</code></pre>
+<hr />
+<h4 id="quiz02">Quiz02</h4>
+<pre><code class="language-Csharp">var query = data
+    .Where(p =&gt; p % 2 == 0)
+    .Select(p =&gt; p * 2);
+
+foreach (var item in query)
+{
+    Console.WriteLine(item);
+}
+</code></pre>
+<pre><code class="language-Csharp">var query = from p in data
+            where p % 2 == 0
+            select p * 2;
+
+foreach (var item in query)
+{
+    Console.WriteLine(item);
+}
+</code></pre>
+<hr />
+<h4 id="quiz03">Quiz03</h4>
+<pre><code class="language-Csharp">var query = data
+    .Where(p =&gt; p % 2 == 0)
+    .OrderByDescending(p =&gt; p)
+    .Select(p =&gt; p * 2);
+
+foreach (var item in query)
+{
+    Console.WriteLine(item);
+}
+</code></pre>
+<pre><code class="language-Csharp">var query = from p in data
+            where p % 2 == 0
+            orderby p descending
+            select p * 2;
+
+foreach (var item in query)
+{
+    Console.WriteLine(item);
+}
+</code></pre>
+<hr />
+<h4 id="quiz04">Quiz04</h4>
+<pre><code class="language-Csharp">var query = employeeData.AsEnumerable()
+    .Select(p =&gt; Convert.ToString(p[&quot;LastName&quot;]));
+
+foreach (var item in query)
+{
+    Console.WriteLine(item);
+}
+</code></pre>
+<pre><code class="language-Csharp">var query = from p in employeeData.AsEnumerable()
+            select Convert.ToString(p[&quot;LastName&quot;]);
+
+foreach (var item in query)
+{
+    Console.WriteLine(item);
+}
+</code></pre>
+<hr />
+<h4 id="quiz05">Quiz05</h4>
+<pre><code class="language-Csharp">var query = employeeData.AsEnumerable()
+    .Where(p =&gt; Convert.ToString(p[&quot;Title&quot;]) == &quot;PG&quot;)
+    .OrderByDescending(p =&gt; Convert.ToDateTime(p[&quot;HireDate&quot;]))
+    .Select(p =&gt; Convert.ToInt32(p[&quot;ID&quot;]));
+
+foreach (var item in query)
+{
+    Console.WriteLine(item);
+}
+</code></pre>
+<pre><code class="language-Csharp">var query = from p in employeeData.AsEnumerable()
+            where Convert.ToString(p[&quot;Title&quot;]).Equals(&quot;PG&quot;)
+            orderby Convert.ToDateTime(p[&quot;HireDate&quot;]) descending
+            select Convert.ToInt32(p[&quot;ID&quot;]);
+
+foreach (var item in query)
+{
+    Console.WriteLine(item);
+}
+</code></pre>
+<hr />
+<h4 id="quiz06">Quiz06</h4>
+<pre><code class="language-Csharp">var query = employeeData.AsEnumerable()
+    .Where(p =&gt; Convert.ToString(p[&quot;Department&quot;]) == &quot;B2&quot;)
+    .Max(p =&gt; Convert.ToDateTime(p[&quot;HireDate&quot;]));
+
+Console.WriteLine(query);
+</code></pre>
+<pre><code class="language-Csharp">var query = (from p in employeeData.AsEnumerable()
+             where Convert.ToString(p[&quot;Department&quot;]).Equals(&quot;B2&quot;)
+             select Convert.ToDateTime(p[&quot;HireDate&quot;])).Max();
+
+Console.WriteLine(query);
+</code></pre>
+<hr />
+<h4 id="quiz07">Quiz07</h4>
+<pre><code class="language-Csharp">var query = employeeData.AsEnumerable()
+    .FirstOrDefault(p =&gt; Convert.ToString(p[&quot;Department&quot;]) == &quot;C1&quot;);
+
+Console.WriteLine(query[&quot;ID&quot;]);
+</code></pre>
+<pre><code class="language-Csharp">var query = (from p in employeeData.AsEnumerable()
+             where Convert.ToString(p[&quot;Department&quot;]).Equals(&quot;C1&quot;)
+             select p).FirstOrDefault();
+
+Console.WriteLine(query[&quot;FirstName&quot;]);
+</code></pre>
+<hr />
+<h4 id="quiz08">Quiz08</h4>
+<pre><code class="language-Csharp">var query = employeeData.AsEnumerable()
+    .Skip(5).Take(5);
+
+foreach (var item in query)
+{
+    Console.WriteLine(item[&quot;ID&quot;]);
+}
+</code></pre>
+<pre><code class="language-Csharp">int employeesInPage = 5; // 每頁筆數
+int pageIndex = 3; // 目前頁次
+
+var query = employeeData.AsEnumerable()
+    .Skip((pageIndex - 1) * employeesInPage).Take(employeesInPage);
+
+foreach (var item in query)
+{
+    Console.WriteLine(item[&quot;ID&quot;]);
+}
+</code></pre>
+<hr />
+<h4 id="quiz09">Quiz09</h4>
+<pre><code class="language-Csharp">var query = employeeData.AsEnumerable()
+    .Any(p =&gt; Convert.ToDateTime(p[&quot;HireDate&quot;]).Year == 2016 &amp;&amp; Convert.ToDateTime(p[&quot;HireDate&quot;]).Month == 6);
+
+Console.WriteLine(query);
+</code></pre>
+<pre><code class="language-Csharp">var query = (from p in employeeData.AsEnumerable()
+             where Convert.ToDateTime(p[&quot;HireDate&quot;]).Year == 2016 &amp;&amp; Convert.ToDateTime(p[&quot;HireDate&quot;]).Month == 6
+             select p).Any();
+
+Console.WriteLine(query);
+</code></pre>
+<pre><code class="language-Csharp">// 進階
+var query = employeeData.AsEnumerable()
+    .Any(p =&gt;
+    {
+        DateTime hireDate = Convert.ToDateTime(p[&quot;HireDate&quot;]);
+        return hireDate.Year == 2016 &amp;&amp; hireDate.Month == 6;
+    });
+
+Console.WriteLine(query);
+</code></pre>
+<hr />
+<h4 id="quiz10">Quiz10</h4>
+<pre><code class="language-Csharp">var query = employeeData.AsEnumerable()
+    .Select(p =&gt; Convert.ToString(p[&quot;LastName&quot;]))
+    .Distinct();
+
+foreach (var item in query)
+{
+    Console.WriteLine(item);
+}
+</code></pre>
+<pre><code class="language-Csharp">var query = (from p in employeeData.AsEnumerable()
+             select Convert.ToString(p[&quot;LastName&quot;])).Distinct();
+
+foreach (var item in query)
+{
+    Console.WriteLine(item);
+}
+</code></pre>
+<hr />
+<h4 id="quiz11">Quiz11</h4>
+<pre><code class="language-Csharp">var query = employeeData.AsEnumerable()
+    .ToDictionary(
+        p =&gt; Convert.ToInt32(p[&quot;ID&quot;]),
+        q =&gt; Convert.ToString(q[&quot;FirstName&quot;]));
+
+foreach (var item in query)
+{
+    Console.WriteLine($&quot;Key: {item.Key}, Value: {item.Value}&quot;);
+}
+</code></pre>
+<hr />
+<h4 id="quiz12">Quiz12</h4>
+<pre><code class="language-Csharp">var query = employeeData.AsEnumerable()
+    .GroupBy(p =&gt; Convert.ToString(p[&quot;Department&quot;]))
+    .Select(p =&gt; new
+    {
+        p.Key,
+        Data = p.ToList()
+    });
+</code></pre>
+<pre><code class="language-Csharp">var query = from p in employeeData.AsEnumerable()
+            group p by Convert.ToString(p[&quot;Department&quot;]) into grp
+            select new
+            {
+                grp.Key,
+                Data = grp.ToList()
+            };
+</code></pre>
+<hr />
+<h4 id="quiz13">Quiz13</h4>
+<pre><code class="language-Csharp">var query = data
+    .SelectMany(p =&gt; p.People);
+
+foreach (var item in query)
+{
+    Console.WriteLine(item);
+}
+</code></pre>
+<pre><code class="language-Csharp">// 進階題
+DataTable employeeData = Employees.GetEmployeesDataTable();
+var query = employeeData.AsEnumerable()
+    .GroupBy(p =&gt; Convert.ToString(p[&quot;Department&quot;]))
+    .Select(p =&gt; new
+    {
+        p.Key,
+        Data = p.ToList()
+    });
+
+var query1 = query.SelectMany(p =&gt; p.Data);
+
+foreach (var item in query1)
+{
+    Console.WriteLine(item[&quot;FirstName&quot;]);
+}
+</code></pre>
+<hr />
+<h4 id="quiz14">Quiz14</h4>
+<pre><code class="language-Csharp">var query = departmentData.AsEnumerable()
+    .Join(employeeData.AsEnumerable(),
+        dep =&gt; Convert.ToString(dep[&quot;ID&quot;]),
+        emp =&gt; Convert.ToString(emp[&quot;Department&quot;]),
+        (dep, emp) =&gt; new
+        {
+            Department = dep,
+            Employee = emp
+        });
+</code></pre>
+<pre><code class="language-Csharp">var query = from dep in departmentData.AsEnumerable()
+            join emp in employeeData.AsEnumerable() on Convert.ToString(dep[&quot;ID&quot;]) equals Convert.ToString(emp[&quot;Department&quot;])
+            select new
+            {
+                Department = dep,
+                Employee = emp
+            };
+</code></pre>
+<hr />
+<h4 id="quiz15">Quiz15</h4>
+<pre><code class="language-Csharp">var query = departmentData.AsEnumerable()
+    .GroupJoin(employeeData.AsEnumerable(),
+        dep =&gt; Convert.ToString(dep[&quot;ID&quot;]),
+        emp =&gt; Convert.ToString(emp[&quot;Department&quot;]),
+        (dep, emps) =&gt; new
+        {
+            Department = dep,
+            Employees = emps
+        })
+    .SelectMany(
+        p =&gt; p.Employees.DefaultIfEmpty(),
+        (p, emp) =&gt; new
+        {
+            p.Department,
+            Employee = emp
+        });
+</code></pre>
+<pre><code class="language-Csharp">var query = from dep in departmentData.AsEnumerable()
+            join emp in employeeData.AsEnumerable() on Convert.ToString(dep[&quot;ID&quot;]) equals Convert.ToString(emp[&quot;Department&quot;]) into emps
+            from emp2 in emps.DefaultIfEmpty()
+            select new
+            {
+                Department = dep,
+                Employee = emp2
+            };
+</code></pre>
+<p>恭喜完成! 🎉🎉🎉</p>
+<script src="md-styles.js"></script>
+
+
+</body>
+</html>

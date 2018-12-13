@@ -11,10 +11,10 @@ namespace LinqQuiz
     {
         public static void Run()
         {
-            // 請取出 Data 員工清單中，Department 為 B2 的員工，並找出這些員工的 HireDate 最晚的日期 是哪一天
-            // Data 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
+            // 請取出 employeeData 員工清單中，Department 為 B2 的員工，並找出這些員工的 HireDate 最晚的日期 是哪一天
+            // employeeData 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
 
-            DataTable data = Employees.GetEmployeesDataTable();
+            DataTable employeeData = Employees.GetEmployeesDataTable();
 
             // 作答區
 

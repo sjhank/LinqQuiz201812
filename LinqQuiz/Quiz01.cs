@@ -10,9 +10,9 @@ namespace LinqQuiz
     {
         public static void Run()
         {
-            // 請從 1 ~ 10 的數字集合中，取得 每個數字 乘上 2 的結果
+            // 請從 1 ~ 10 的數字集合中，取得 每個數字 乘上 2 的結果 query
 
-            var Data = Enumerable.Range(1, 10);
+            var data = Enumerable.Range(1, 10);
 
             // 作答區
 

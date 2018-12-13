@@ -12,7 +12,7 @@ namespace LinqQuiz
         {
             // 請從 1 ~ 10 的數字集合中，找出偶數，並由大到小排序，再取得 剩餘數字 乘上 2 的結果
 
-            var Data = Enumerable.Range(1, 10);
+            var data = Enumerable.Range(1, 10);
 
             // 作答區
 

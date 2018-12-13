@@ -11,10 +11,10 @@ namespace LinqQuiz
     {
         public static void Run()
         {
-            // 請取出 Data 員工清單中，Title 為 PG 的員工，並依照 HireDate 由後到先排序，並取出 ID 數字，得到集合物件 query
-            // Data 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
+            // 請取出 employeeData 員工清單中，Title 為 PG 的員工，並依照 HireDate 由後到先排序，並取出 ID 數字，得到集合物件 query
+            // employeeData 內容請參考 Employees.cs (tip. 在下方 GetEmployeesDataTable 點一下，按下 F12)
 
-            DataTable data = Employees.GetEmployeesDataTable();
+            DataTable employeeData = Employees.GetEmployeesDataTable();
 
             // 作答區
 
