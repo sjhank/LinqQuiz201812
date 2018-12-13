@@ -77,6 +77,7 @@
       <DependentUpon>Answer.md</DependentUpon>
     </Content>
     <Content Include="Answer\md-styles.js" />
+    <Content Include="Readme.txt" />
     <None Include="Answer\md-styles.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
